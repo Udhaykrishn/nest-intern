@@ -5,6 +5,7 @@ import { UserModule } from "./user/user.module";
 import { ThrottlerGuard, ThrottlerModule } from "@nestjs/throttler";
 import { APP_GUARD } from "@nestjs/core";
 import { AuthModule } from "./auth/auth.module";
+import { TestModule } from "./test/test.module";
 
 @Module({
   imports: [
@@ -14,12 +15,14 @@ import { AuthModule } from "./auth/auth.module";
     AuthModule,
     UserModule,
     PrismaModule,
+    TestModule,
     ThrottlerModule.forRoot([
       {
         ttl: 4000,
         limit: 3,
       },
     ]),
+    TestModule,
   ],
   providers: [
     {
