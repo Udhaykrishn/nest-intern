@@ -9,19 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserDto = void 0;
-const class_validator_1 = require("class-validator");
-class UserDto {
-}
-exports.UserDto = UserDto;
+exports.TestController = void 0;
+const common_1 = require("@nestjs/common");
+let TestController = class TestController {
+    Hello() {
+        return "Hello world";
+    }
+};
+exports.TestController = TestController;
 __decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], UserDto.prototype, "username", void 0);
-__decorate([
-    (0, class_validator_1.IsEmail)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], UserDto.prototype, "email", void 0);
-//# sourceMappingURL=user.dto.js.map
+    (0, common_1.Get)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], TestController.prototype, "Hello", null);
+exports.TestController = TestController = __decorate([
+    (0, common_1.Controller)("test")
+], TestController);
+//# sourceMappingURL=test.controller.js.map
