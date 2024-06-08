@@ -15,7 +15,7 @@ export class AuthService {
     private readonly jwt: JwtService,
     private readonly config: ConfigService
   ) {
-    this.jwtSecret = this.config.get<string>("JWT_SECRET");
+    this.jwtSecret = process.env.JWT_SECRET
   }
 
   async signup({ role, password, ...signupDto }: AuthDto) {
