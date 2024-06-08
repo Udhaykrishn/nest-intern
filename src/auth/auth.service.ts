@@ -1,6 +1,6 @@
 import { ForbiddenException, Injectable } from "@nestjs/common";
 import { comparePass, hashPassword } from "./password";
-import { PrismaService } from "src/prisma/prisma.service";
+import { PrismaService } from "../prisma/prisma.service";
 import { AuthDto } from "./dto";
 import { Role } from "./role/role.enum";
 import { JwtService } from "@nestjs/jwt";

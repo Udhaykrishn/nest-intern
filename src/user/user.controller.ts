@@ -3,7 +3,7 @@ import { User } from "@prisma/client";
 import { UserDto } from "./dtio";
 import { JwtGuard } from "src/auth/guard";
 import { UserService } from "./user.service";
-import { GetUser } from "src/auth/decorator";
+import { GetUser } from "../auth/decorator";
 
 @UseGuards(JwtGuard)
 @Controller("user")
