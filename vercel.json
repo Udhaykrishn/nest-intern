@@ -1,9 +1,5 @@
 {
     "version": 2,
-    "env":{
-        "DATABASE_URL":"@postgr_url",
-        "JWT_SECRET":"@jwt_secret"
-    },
     "builds": [
         {
             "src": "src/main.ts",
