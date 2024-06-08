@@ -21,7 +21,7 @@ let AuthService = class AuthService {
         this.prisma = prisma;
         this.jwt = jwt;
         this.config = config;
-        this.jwtSecret = this.config.get("JWT_SECRET");
+        this.jwtSecret = process.env.JWT_SECRET;
     }
     async signup({ role, password, ...signupDto }) {
         const userRole = role || role_enum_1.Role.USER;
